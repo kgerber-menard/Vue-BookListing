@@ -25,7 +25,7 @@
           finishedReading: false,
           ownership: []
         }
-      }
+      };
     },
     methods: {
       bookSubmit(bookData){

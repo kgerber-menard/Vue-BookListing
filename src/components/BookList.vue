@@ -2,9 +2,7 @@
   <div>
     <h1>{{title}}</h1>
     <ul>
-      <li>Star Trek TNG</li>
-      <li>Star Trek DS9</li>
-      <li>Star Trek Voyager</li>
+      <li v-for="book in books">{{book.title}}: {{book.author}}</li>
     </ul>
   </div>
 
@@ -14,7 +12,12 @@ export default {
   name: 'BookList',
   data() {
     return {
-      title: 'All Books'
+      title: 'All Books',
+      books: [
+        {title: 'Self-Reliance', author: 'Ralph Waldo Emerson'},
+        {title: 'American Gods', author: 'Neil Gaiman'},
+        {title: 'Amusing Ourselves to Death', author: 'Neil Postman'},
+      ]
     }
   }
 }

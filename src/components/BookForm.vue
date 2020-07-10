@@ -3,12 +3,20 @@
     <input v-model="bookData.bookTitle" type="text" name="title" value="" placeholder="Book Title">
     <input v-model="bookData.bookAuthor" type="text" name="author" value="" placeholder="Book Author">
     <div>
-      <label for="finishedReading">Finished Reading</label>
-      <input v-model="bookData.finishedReading" type="checkbox">
-      <label for="borowed">borrowed</label>
-      <input v-model="bookData.ownership" type="radio" value="borrowed">
-      <label for="bought">bought</label>
-      <input v-model="bookData.ownership" type="radio" value="bought">
+      <label for="finishedReading">
+        Finished Reading
+        <input v-model="bookData.finishedReading" type="checkbox">
+      </label>
+    </div>
+    <div>
+      <label for="borowed">
+        borrowed
+        <input v-model="bookData.ownership" type="radio" value="borrowed">
+      </label>
+      <label for="bought">
+        bought
+        <input v-model="bookData.ownership" type="radio" value="bought">
+      </label>
     </div>
     <button type="submit" name="button">Add Book</button>
   </form>
@@ -18,10 +26,10 @@
     name: 'BookForm',
     props: ['books'],
     data() {
-      return{
+      return {
         bookData: {
-          bookTitle: '',
-          bookAuthor: '',
+          bookTitle: "",
+          bookAuthor: "",
           finishedReading: false,
           ownership: []
         }
@@ -29,7 +37,7 @@
     },
     methods: {
       bookSubmit(bookData){
-        this.$emit(bookData);
+        this.$emit("addBook", bookData);
       }
     }
   }

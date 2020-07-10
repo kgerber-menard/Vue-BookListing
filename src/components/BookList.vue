@@ -39,6 +39,4 @@ export default {
     list-style-type: none;
     padding: 0;
   }
-
-
 </style>

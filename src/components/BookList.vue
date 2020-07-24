@@ -22,7 +22,10 @@ export default {
         {title: 'Amusing Ourselves to Death', author: 'Neil Postman'},
       ],
       bookData: {
-
+        bookTitle: "",
+        bookAuthor: "",
+        finishedReading: false,
+        ownership: []
       }
     }
   },
